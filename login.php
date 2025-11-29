@@ -30,8 +30,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Task App</title>
+    <title>Login</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/png" href="TDlogo.png">
     <script>
         tailwind.config = {
             theme: {
@@ -65,11 +66,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <body class="text-slate-800 min-h-screen flex flex-col overflow-x-hidden">
     <div class="container mx-auto px-6 py-12 flex-1 max-w-5xl animate-[fadeInUp_0.8s_ease-out]">
         <div class="flex justify-between items-center mb-12 animate-[fadeInDown_0.8s_ease]">
-            <a href="#" class="text-3xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent hover:scale-105 hover:-rotate-2 transition-transform duration-300">TD</a>
+            <a href="#" class="flex items-center gap-3 text-3xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent hover:scale-105 hover:-rotate-2 transition-transform duration-300">
+                    <img src="TDlogo.png" alt="TD Logo" class="w-10 h-10 rounded-full shadow-md"> Task Dynamics
+                </a>
         </div>
 
         <div class="glass-card rounded-3xl shadow-xl p-12 mb-8 max-w-md mx-auto transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-indigo-500/20">
             <h2 class="text-3xl font-bold mb-8 text-center">Welcome Back</h2>
+            <!-- <div class="flex justify-center mb-6">
+                <img src="TaskDynamicsLogo2.png" alt="TD Logo" class="w-24 h-24 rounded-xl shadow-lg">
+            </div> -->
             <?php if ($error): ?>
                 <div class="text-rose-500 mb-4 text-center font-medium"><?php echo htmlspecialchars($error); ?></div>
             <?php endif; ?>

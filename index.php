@@ -12,7 +12,7 @@ if (!$tasks) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard - Task App</title>
+    <title>Dashboard</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -44,6 +44,7 @@ if (!$tasks) {
         }
     </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js"></script>
+    <link rel="icon" type="image/png" href="TDlogo.png">
 </head>
 <body class="text-slate-800 min-h-screen flex flex-col overflow-x-hidden">
     <div class="container mx-auto px-6 py-12 flex-1 max-w-5xl animate-[fadeInUp_0.8s_ease-out]">
@@ -57,7 +58,9 @@ if (!$tasks) {
         <?php else: ?>
             <!-- Normal State: Headers and List -->
             <div class="flex justify-between items-center mb-12 animate-[fadeInDown_0.8s_ease]">
-                <a href="index.php" class="text-3xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent hover:scale-105 hover:-rotate-2 transition-transform duration-300">TD</a>
+                <a href="index.php" class="flex items-center gap-3 text-3xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent hover:scale-105 hover:-rotate-2 transition-transform duration-300">
+                    <img src="TDlogo.png" alt="TD Logo" class="w-10 h-10 rounded-full shadow-md"> Task Dynamics
+                </a>
                 <a href="logout.php" class="px-4 py-2 border-2 border-slate-300 text-slate-500 rounded-xl hover:bg-white/50 hover:text-slate-800 hover:-translate-y-0.5 transition-all duration-300">Logout</a>
             </div>
 
